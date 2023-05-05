@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package parser;
+
+option go_package = "./proto";
+
+message AuditStartRequest {
+  string fileName = 1;
+  string taskId = 2;
+  string signature = 3;
+}
+
+message AuditStartResponse {
+    string requestId = 1 ; 
+}
+
+service ParserHandlerService {
+  rpc AuditStartProcessor(AuditStartRequest) returns (AuditStartResponse) {}
+}
