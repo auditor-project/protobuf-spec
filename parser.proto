@@ -6,7 +6,7 @@ option go_package = "./proto";
 
 message AuditStartRequest {
   string fileName = 1;
-  string taskId = 2;
+  string projectId = 2;
   string signature = 3;
 }
 
